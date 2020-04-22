@@ -1,14 +1,12 @@
-package src.java.main.business.helloWorld;
+package com.business.controller;
 
-
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class Helloworld {
-
     @GetMapping("/test")
     public String ping() {
+        System.out.println("hello world!");
         return "sdsd";
     }
 }
