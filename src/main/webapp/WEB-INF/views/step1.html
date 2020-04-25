@@ -1,0 +1,162 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HelpMyDecision.com - Decision Matrix - Part 1</title>
+    <link rel="stylesheet" type="text/css" media="all" href="hmdstyle.css">
+    <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+    <script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4836805-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+
+<body>
+
+<!-- MAIN HEADER / NAV ************************* -->
+<div id="mainheader">
+    <div class="contentcontainer">
+        <a href="http://www.helpmydecision.com"><img src="images/logo.png" id="logo" alt="Memix"></a>
+        <div id="navcontainer">
+            <a href="http://www.helpmydecision.com/" class="topnav">Home</a>
+            <a href="how-it-works.php" class="topnav">How It Works</a>
+            <a href="why-use-it.php" class="topnav">Why Use It?</a>
+            <a href="contact-hmd.php" class="topnav">Contact</a>
+        </div>
+    </div>
+</div>
+<!-- END MAIN HEADER / NAV ********************* -->
+
+<!-- SUBHEAD *********************************** -->
+<div id="subpageheader">
+    <div class="contentcontainer">
+
+        <h1>Step 1: Tell Us About Your Decision!</h1>
+    </div>
+</div>
+<!-- END SUBHEAD + CAROUSEL ******************* -->
+
+<!-- MAIN CENTERED CONTENT BLOCK *************** -->
+<div id="contentblock">
+    <div class="contentcontainer">
+
+        <form action="matrix-2.php" method="post" name="q1">
+
+            <div class="bigform">
+                <h3>START: Your Decision and Your Name</h3>
+                <div class="formindent">
+                    <div class="leftform">
+                        What is your decision?
+                        <br>
+                        <div class="tinytext">Example: Do I move to Phoenix or stay in Chicago?
+                            <br> Do I accept the job offer or stay at my current job?
+                        </div>
+                    </div>
+
+                    <div class="rightform">
+
+                            <span id="sprytextfield1">
+<label>
+<input type="text" name="decisionname" id="decisionname" class="inputstyle" size="14" maxlength="50" autocomplete="off">
+</label> <span class="textfieldRequiredMsg errorMsg">Name your decision.</span>
+                            </span>
+
+                    </div>
+
+                    <div class="clear"></div>
+                    <div class="leftform">Your name
+                        <br>
+                        <div class="tinytext">Joe Schmo or JBS or whatever!
+                        </div>
+                    </div>
+
+                    <div class="rightform">
+                            <span id="sprytextfield2">
+<label>
+  <input type="text" name="username" id="username" class="inputstyle" size="14" maxlength="50" autocomplete="off">
+ </label><span class="textfieldRequiredMsg">Enter name or initials.</span>
+                            </span>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bigform">
+                <h3>NEXT: How Many Choices Are There Within the Decision?</h3>
+                <div class="formindent">
+
+                    <div class="leftalign">2 choices
+                        <input type="radio" name="decisioncount" value="2" checked="" class="radio">
+                    </div>
+                    <div class="tinytextright">Example:
+                        <br>Do I move to Phoenix or stay in Chicago?</div>
+                    <div class="clear"></div>
+
+                    <div class="leftalign">3 choices
+                        <input type="radio" name="decisioncount" value="3" class="radio">
+                    </div>
+                    <div class="tinytextright">Example:
+                        <br> Do I move to Phoenix, Las Vegas, or stay in Chicago?</div>
+                    <div class="clear"></div>
+
+                    <div class="leftalign">4 choices
+                        <input type="radio" name="decisioncount" value="4" class="radio">
+                    </div>
+                    <div class="tinytextright">Example:
+                        <br> Do I move to Phoenix, Las Vegas, Boston, or stay in Chicago?</div>
+                    <div class="clear"></div>
+                    <br>
+                    <div>
+                        <input name="submit" type="submit" value="Next >>" class="bigformbutton">
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+<!-- END CENTERED CONTENT BLOCK **************** -->
+
+<!-- FOOTER BLOCK ***************************** -->
+<div id="footer">
+    <div id="footercontainer">
+        <div id="footerleft"><em id="quote">"Your choices are made in a moment, and yet their consequences transcend a lifetime"</em>
+            <br>~ MJ DeMarco, Entrepreneur/Author of The Millionaire Fastlane</div>
+        <div id="footerright">
+            © Copyright 2011
+            <br>Viperion Publishing Corporation
+            <br> For Entertainment Purposes Only
+            <br>
+            <a href="terms-of-use.html">Terms of Use</a>
+        </div>
+    </div>
+</div>
+<!-- END FOOTER BLOCK ************************* -->
+
+<script type="text/javascript">
+    <!--
+    var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+    var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
+    //-->
+</script>
+
+</body>
+
+</html>

@@ -1,12 +1,25 @@
 package com.business.controller;
 
+import com.util.CommonUtil;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+@Controller
 public class Helloworld {
-    @GetMapping("/test")
-    public String ping() {
-        System.out.println("hello world!");
-        return "sdsd";
+
+    @Resource
+    private CommonUtil common;
+
+    @GetMapping("/hello")
+    public String ping(HttpServletRequest request) {
+        return common.returnBasicURI(request);
     }
+    @GetMapping("/helloVue")
+    public String helloVue(HttpServletRequest request) {
+        return common.returnVueURI(request);
+    }
+
 }

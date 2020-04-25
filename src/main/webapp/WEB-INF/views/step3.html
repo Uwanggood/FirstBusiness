@@ -1,0 +1,170 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HelpMyDecision.com - Decision Matrix - Part 3</title>
+    <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
+    <link rel="stylesheet" type="text/css" media="all" href="hmdstyle.css">
+    <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+    <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript">
+        function activateBoxes(x) {
+            var dlabel = "factor" + x;
+            var dlabel2 = "factor" + x + x;
+            var fim = "fim" + x;
+            var df = "df" + x;
+            var cb = "cb" + x;
+            var fcount = parseInt(document.getElementById("factorcount").value);
+            if (document.getElementById(cb).checked == true) {
+                document.getElementById(df).disabled = false;
+                document.getElementById(fim).disabled = false;
+                document.getElementById(df).style.backgroundColor = "#ffffcc";
+                document.getElementById(fim).style.backgroundColor = "#ffffcc";
+                document.getElementById(dlabel).style.color = "#000000";
+                document.getElementById(dlabel2).style.color = "#000000";
+                document.getElementById("factorcount").value = fcount+1;
+            } else {
+                document.getElementById(df).disabled = true;
+                document.getElementById(fim).disabled = true;
+                document.getElementById(df).style.backgroundColor = "#ffffff";
+                document.getElementById(fim).style.backgroundColor = "#ffffff";
+                document.getElementById(dlabel).style.color = "#999";
+                document.getElementById(dlabel2).style.color = "#999";
+                document.getElementById("factorcount").value = fcount-1;
+            }
+        }
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4836805-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+
+<body>
+
+
+<!-- MAIN HEADER / NAV ************************* -->
+<div id="mainheader">
+    <div class="contentcontainer">
+        <a href="http://www.helpmydecision.com"><img src="images/logo.png" id="logo" alt="Memix"></a>
+        <div id="navcontainer">
+            <a href="http://www.helpmydecision.com/" class="topnav">Home</a>
+            <a href="how-it-works.php" class="topnav">How It Works</a>
+            <a href="why-use-it.php" class="topnav">Why Use It?</a>
+            <a href="contact-hmd.php" class="topnav">Contact</a>
+        </div>
+    </div>
+</div>
+<!-- END MAIN HEADER / NAV ********************* -->
+
+
+
+<!-- SUBHEAD *********************************** -->
+<div id="subpageheader">
+    <div class="contentcontainer">
+
+        <h1>Step 3: Please Identify Your Decision Factors</h1>
+    </div>
+</div>
+<!-- END SUBHEAD + CAROUSEL ******************* -->
+
+
+
+<!-- MAIN CENTERED CONTENT BLOCK *************** -->
+<div id="contentblock">
+    <div class="contentcontainer">
+
+        <div class="bigform">
+            <h3>Help</h3>
+            <div class="formindent">
+                <p><img src="images/chalkboard.png" class="leftalign" style="margin-right:10px;">
+                    When making basic decisions, you subconsciously identify <strong>factors</strong> relevant to the decision.  These factors "weigh" and create the evaluative environment for decision making. For example, if you were evaluating a move from Chicago to Phoenix—crime, family, schools, entertainment, cost of living, and job market might be <strong>relevent decision factors</strong>.  </p><p>If the decision factor "weather" was extremely important to you, you would weigh that factor a 10. If your children are near 18 years old, the decision factor "schools" might hold less importance and weigh a 3. </p>
+            </div>
+        </div>
+
+        <form action="matrix-4.php" method="post" name="decisionfactors">
+            <div class="bigform">
+                <h3>Please identify ALL the factors relevant to this decision and WEIGHT them 1-10</h3>
+                <div class="formindent">
+                    <div class="leftform" style="color:#f00;">Decision Factors<br><div class="tinytext">Examples of decision factors:<br>Crime, cost of living, schools, weather, job market.</div></div><div class="rightform" style="color:#f00;">Weight (1-10)<br><div class="tinytext">10 = Extremely important<br>1 = Not very important</div></div>
+
+                    <div class="smallform" id="factorbox"><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield1"><div class="leftcolumnText"><label style="color:#000" id="factor1">Factor 1:</label></div><input name="df1" type="text" size="15" id="df1" maxlength="20" enabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield11"><div class="leftcolumnText"><label style="color:#000" id="factor11">Weight:</label></div><input name="fim1" type="text" size="15" enabled="" id="fim1" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield2"><div class="leftcolumnText"><label style="color:#000" id="factor2">Factor 2:</label></div><input name="df2" type="text" size="15" id="df2" maxlength="20" enabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield22"><div class="leftcolumnText"><label style="color:#000" id="factor22">Weight:</label></div><input name="fim2" type="text" size="15" enabled="" id="fim2" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield3"><div class="leftcolumnText"><label style="color:#000" id="factor3">Factor 3:</label></div><input name="df3" type="text" size="15" id="df3" maxlength="20" enabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield33"><div class="leftcolumnText"><label style="color:#000" id="factor33">Weight:</label></div><input name="fim3" type="text" size="15" enabled="" id="fim3" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield4"><div class="leftcolumnText"><label style="color:#000" id="factor4">Factor 4:</label></div><input name="df4" type="text" size="15" id="df4" maxlength="20" enabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield44"><div class="leftcolumnText"><label style="color:#000" id="factor44">Weight:</label></div><input name="fim4" type="text" size="15" enabled="" id="fim4" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield5"><div class="leftcolumnText"><label style="color:#000" id="factor5">Factor 5:</label></div><input name="df5" type="text" size="15" id="df5" maxlength="20" enabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield55"><div class="leftcolumnText"><label style="color:#000" id="factor55">Weight:</label></div><input name="fim5" type="text" size="15" enabled="" id="fim5" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="textright" style="margin:35px;"><input name="submit" class="bigformbutton" type="submit" value="Next >>"></div><div style="color:#f30;border-bottom: thin dashed #666;margin: 65px 0 10px;">Or, add more factors (Checkbox)</div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb6" id="cb6" onchange="activateBoxes(&quot;6&quot;);"></div><span id="sprytextfield6"><div class="leftcolumnText"><label style="color:#999" id="factor6">Factor 6:</label></div><input name="df6" type="text" size="15" id="df6" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield66"><div class="leftcolumnText"><label style="color:#999" id="factor66">Weight:</label></div><input name="fim6" type="text" size="15" disabled="" id="fim6" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb7" id="cb7" onchange="activateBoxes(&quot;7&quot;);"></div><span id="sprytextfield7"><div class="leftcolumnText"><label style="color:#999" id="factor7">Factor 7:</label></div><input name="df7" type="text" size="15" id="df7" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield77"><div class="leftcolumnText"><label style="color:#999" id="factor77">Weight:</label></div><input name="fim7" type="text" size="15" disabled="" id="fim7" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb8" id="cb8" onchange="activateBoxes(&quot;8&quot;);"></div><span id="sprytextfield8"><div class="leftcolumnText"><label style="color:#999" id="factor8">Factor 8:</label></div><input name="df8" type="text" size="15" id="df8" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield88"><div class="leftcolumnText"><label style="color:#999" id="factor88">Weight:</label></div><input name="fim8" type="text" size="15" disabled="" id="fim8" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb9" id="cb9" onchange="activateBoxes(&quot;9&quot;);"></div><span id="sprytextfield9"><div class="leftcolumnText"><label style="color:#999" id="factor9">Factor 9:</label></div><input name="df9" type="text" size="15" id="df9" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytextfield99"><div class="leftcolumnText"><label style="color:#999" id="factor99">Weight:</label></div><input name="fim9" type="text" size="15" disabled="" id="fim9" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb10" id="cb10" onchange="activateBoxes(&quot;10&quot;);"></div><span id="sprytxtfield10"><div class="leftcolumnText"><label style="color:#999" id="factor10">Factor 10:</label></div><input name="df10" type="text" size="15" id="df10" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytxtfield1010"><div class="leftcolumnText"><label style="color:#999" id="factor1010">Weight:</label></div><input name="fim10" type="text" size="15" disabled="" id="fim10" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb11" id="cb11" onchange="activateBoxes(&quot;11&quot;);"></div><span id="sprytxtfield11"><div class="leftcolumnText"><label style="color:#999" id="factor11">Factor 11:</label></div><input name="df11" type="text" size="15" id="df11" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytxtfield1111"><div class="leftcolumnText"><label style="color:#999" id="factor1111">Weight:</label></div><input name="fim11" type="text" size="15" disabled="" id="fim11" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb12" id="cb12" onchange="activateBoxes(&quot;12&quot;);"></div><span id="sprytxtfield12"><div class="leftcolumnText"><label style="color:#999" id="factor12">Factor 12:</label></div><input name="df12" type="text" size="15" id="df12" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytxtfield1212"><div class="leftcolumnText"><label style="color:#999" id="factor1212">Weight:</label></div><input name="fim12" type="text" size="15" disabled="" id="fim12" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb13" id="cb13" onchange="activateBoxes(&quot;13&quot;);"></div><span id="sprytxtfield13"><div class="leftcolumnText"><label style="color:#999" id="factor13">Factor 13:</label></div><input name="df13" type="text" size="15" id="df13" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytxtfield1313"><div class="leftcolumnText"><label style="color:#999" id="factor1313">Weight:</label></div><input name="fim13" type="text" size="15" disabled="" id="fim13" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb14" id="cb14" onchange="activateBoxes(&quot;14&quot;);"></div><span id="sprytxtfield14"><div class="leftcolumnText"><label style="color:#999" id="factor14">Factor 14:</label></div><input name="df14" type="text" size="15" id="df14" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytxtfield1414"><div class="leftcolumnText"><label style="color:#999" id="factor1414">Weight:</label></div><input name="fim14" type="text" size="15" disabled="" id="fim14" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div><div class="smallform" id="factorbox"><div style="float:left;width:22px;height:19px;background-color:#cf9;padding: 4px;margin:3px;"><input type="checkbox" name="cb15" id="cb15" onchange="activateBoxes(&quot;15&quot;);"></div><span id="sprytxtfield15"><div class="leftcolumnText"><label style="color:#999" id="factor15">Factor 15:</label></div><input name="df15" type="text" size="15" id="df15" maxlength="20" disabled="" class="inputstyle" autocomplete="off"><div class="textfieldRequiredMsg">Enter a decision factor</div></span><div style="clear:both;"></div><div style="width:35px;float:left;">&nbsp;</div><span id="sprytxtfield1515"><div class="leftcolumnText"><label style="color:#999" id="factor1515">Weight:</label></div><input name="fim15" type="text" size="15" disabled="" id="fim15" maxlength="2" class="inputstyle" autocomplete="off"><span><span class="textfieldInvalidFormatMsg">Invalid format. (1-10) is required.</span><span class="textfieldMinValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldMaxValueMsg">Factor weight out-of-range. (1-10)</span><span class="textfieldRequiredMsg">Weigh the importance of this factor 1-10.</span></span></span></div>
+
+                    <input name="dcount" type="hidden" value="3">
+                    <input name="factorcount" id="factorcount" type="hidden" value="5">
+                    <input name="decisionname" type="hidden" value="tet">
+                    <input name="username" type="hidden" value="tst">
+                    <input name="c1" type="hidden" value="1" on="">
+                    <input name="c2" type="hidden" value="2">
+                    <input name="c3" type="hidden" value="3">
+                    <input name="c4" type="hidden" value="0">
+
+                    <div class="textright"><input name="submit" class="bigformbutton" type="submit" value="Next >>"></div>
+
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+</div>
+<!-- END CENTERED CONTENT BLOCK **************** -->
+
+<!-- FOOTER BLOCK ***************************** -->
+<div id="footer">
+    <div id="footercontainer">
+        <div id="footerleft"><em id="quote">"Your choices are made in a moment, and yet their consequences transcend a lifetime"</em><br>~ MJ DeMarco, Entrepreneur/Author of The Millionaire Fastlane</div>
+        <div id="footerright">
+            © Copyright 2011<br>Viperion Publishing Corporation<br>
+            For Entertainment Purposes Only<br>
+            <a href="terms-of-use.html">Terms of Use</a>
+        </div>
+    </div>
+</div>
+<!-- END FOOTER BLOCK ************************* -->
+
+<script type="text/javascript">
+    <!--
+    var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+    var sprytextfield11 = new Spry.Widget.ValidationTextField("sprytextfield11", "integer", {minValue:1, maxValue:10});
+    var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
+    var sprytextfield22 = new Spry.Widget.ValidationTextField("sprytextfield22", "integer", {minValue:1, maxValue:10});
+    var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
+    var sprytextfield33 = new Spry.Widget.ValidationTextField("sprytextfield33", "integer", {minValue:1, maxValue:10});
+    var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
+    var sprytextfield44 = new Spry.Widget.ValidationTextField("sprytextfield44", "integer", {minValue:1, maxValue:10});
+    var sprytextfield5 = new Spry.Widget.ValidationTextField("sprytextfield5");
+    var sprytextfield55 = new Spry.Widget.ValidationTextField("sprytextfield55", "integer", {minValue:1, maxValue:10});
+    var sprytextfield6 = new Spry.Widget.ValidationTextField("sprytextfield6");
+    var sprytextfield66 = new Spry.Widget.ValidationTextField("sprytextfield66", "integer", {minValue:1, maxValue:10});
+    var sprytextfield7 = new Spry.Widget.ValidationTextField("sprytextfield7");
+    var sprytextfield77 = new Spry.Widget.ValidationTextField("sprytextfield77", "integer", {minValue:1, maxValue:10});
+    var sprytextfield8 = new Spry.Widget.ValidationTextField("sprytextfield8");
+    var sprytextfield88 = new Spry.Widget.ValidationTextField("sprytextfield88", "integer", {minValue:1, maxValue:10});
+    var sprytextfield9 = new Spry.Widget.ValidationTextField("sprytextfield9");
+    var sprytextfield99 = new Spry.Widget.ValidationTextField("sprytextfield99", "integer", {minValue:1, maxValue:10});
+    var sprytxtfield10 = new Spry.Widget.ValidationTextField("sprytxtfield10");
+    var sprytxtfield1010 = new Spry.Widget.ValidationTextField("sprytxtfield1010", "integer", {minValue:1, maxValue:10});
+    var sprytxtfield11 = new Spry.Widget.ValidationTextField("sprytxtfield11");
+    var sprytxtfield1111 = new Spry.Widget.ValidationTextField("sprytxtfield1111", "integer", {minValue:1, maxValue:10});
+    var sprytxtfield12 = new Spry.Widget.ValidationTextField("sprytxtfield12");
+    var sprytxtfield1212 = new Spry.Widget.ValidationTextField("sprytxtfield1212", "integer", {minValue:1, maxValue:10});
+    var sprytxtfield13 = new Spry.Widget.ValidationTextField("sprytxtfield13");
+    var sprytxtfield1313 = new Spry.Widget.ValidationTextField("sprytxtfield1313", "integer", {minValue:1, maxValue:10});
+    var sprytxtfield14 = new Spry.Widget.ValidationTextField("sprytxtfield14");
+    var sprytxtfield1414 = new Spry.Widget.ValidationTextField("sprytxtfield1414", "integer", {minValue:1, maxValue:10});
+    var sprytxtfield15 = new Spry.Widget.ValidationTextField("sprytxtfield15");
+    var sprytxtfield1515 = new Spry.Widget.ValidationTextField("sprytxtfield1515", "integer", {minValue:1, maxValue:10});
+    //-->
+</script>
+
+
+</body></html>
