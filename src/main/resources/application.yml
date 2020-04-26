@@ -2,7 +2,8 @@ server:
   port: 8081
   servlet:
     context-path: /
-
+    jsp:
+      init-parameters: true
 spring:
   devtools:
     livereload:
@@ -11,7 +12,6 @@ spring:
     view:
       prefix: /WEB-INF/
       suffix: .jsp
-#  resources:
-#    static-locations: classpath:/resources/**
+  resources:
+    static-location:{classpath:/resources/**,classpath:/resources/img/**}
 # * all ** anywhere
-

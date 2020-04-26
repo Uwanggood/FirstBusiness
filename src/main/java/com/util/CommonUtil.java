@@ -2,7 +2,6 @@ package com.util;
 
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 @Component
